@@ -16,7 +16,7 @@ export function calculator(leagueUser, barrackUser, trainingHallUser) {
 }
 
 function getLeagueMIN(leagueUser, trainingHallUser) {
-  if (trainingHall.minLeague[trainingHallUser] < leagueUser) {
+  if (trainingHall.minLeague[trainingHallUser] > leagueUser) {
     const stringErr = `Минимальная лига, в которой вы можете участвовать ${trainingHall.minLeague[trainingHallUser]}.
       Над формулировкай надо поработать`
     return {
@@ -39,7 +39,7 @@ function setFighters(leagueUser, barrackUser) {
     let simpleFighter;
 
     for (let i = 0; i < countAboveLevel; i++) {
-      let fighterAboveLevel = league.nextLeague[leagueUser];
+      let fighterAboveLevel = league.nextLeague[leagueUser] + 1;
       fighters.push(fighterAboveLevel);
       sumAboveLevel += fighterAboveLevel;
     }
