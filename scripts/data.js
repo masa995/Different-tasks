@@ -102,8 +102,8 @@ export const fightersAboveLevel = {
 
 export const trainingHall = {
   minLeague: {
-    3: -1,
-    4: -1,
+    3: 14,
+    4: 20,
     5: 30,
     6: 40,
     7: 55,

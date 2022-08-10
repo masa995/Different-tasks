@@ -5,26 +5,29 @@ import {
 
 export function calculator(leagueUser, barrackUser, trainingHallUser) {
   let leagueErrMIN = getLeagueMIN(leagueUser, trainingHallUser);
-  if (leagueErrMIN) {
-    alert(leagueErrMIN)
+  if (leagueErrMIN.key) {
+    return leagueErrMIN.text;
   } else {
     let fighters = setFighters(leagueUser, barrackUser);
-    let result = balanceOfFighters(fighters, leagueUser, barrackUser);
+    let result = balanceOfFighters(fighters, leagueUser, barrackUser).join(' ур ') + ' ур';
 
-    return result
+    return result;
   }
 }
 
 function getLeagueMIN(leagueUser, trainingHallUser) {
-  if (trainingHall.minLeague.trainingHallUser !== -1) {
-
-    if (trainingHall.minLeague[trainingHallUser] > leagueUser) {
-      const stringErr = `Минимальная лига, в которой вы можете участвовать ${trainingHall.minLeague[trainingHallUser]}
+  if (trainingHall.minLeague[trainingHallUser] < leagueUser) {
+    const stringErr = `Минимальная лига, в которой вы можете участвовать ${trainingHall.minLeague[trainingHallUser]}.
       Над формулировкай надо поработать`
-      return stringErr
+    return {
+      key: true,
+      text: stringErr
     }
   }
-  return false
+  return {
+    key: false,
+    text: ''
+  }
 }
 
 function setFighters(leagueUser, barrackUser) {

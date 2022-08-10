@@ -37,13 +37,11 @@ body{
 .container{
   max-width: 930px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .calculator {
-  padding: 40px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 20px 15px;
 }
 
 .calculator__container {
@@ -173,6 +171,22 @@ transition: all 0.7s ease-out 0s;
   color: #41413f;
 }
 
-.calculator__answer {
+.answer {
+  padding: 15px 20px 40px;
+}
 
+.answer__container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer__block{
+  max-width: 310px;
+  padding: 20px;
+  border: 2px solid #17778f;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #41413f;
+  font-size: 20px;
 }
