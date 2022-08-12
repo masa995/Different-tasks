@@ -24,11 +24,11 @@ window.onload = function () {
     } else {
       const textAnswer = calculator(arenaLeagueVal, barrackVal, trainingHallVal);
 
-      answerElem.innerHTML = `<div class="answer__block">${textAnswer}</div>`;
+      answerElem.innerHTML = `<div class="answer__block">${textAnswer.fighters}. Общая сумма уровней бойцов равна ${textAnswer.sumLevelFighters}.</div>`;
 
-      arenaLeagueElem.value = '';
-      barrackElem.value = '';
-      trainingHallElem.value = '';
+      // arenaLeagueElem.value = '';
+      // barrackElem.value = '';
+      // trainingHallElem.value = '';
     }
   })
 }
