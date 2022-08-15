@@ -1,22 +1,11 @@
 import { calculator } from "./calculator.js";
 
 window.onload = function () {
-  const btnInfoElem = document.querySelectorAll('.js-btn-info');
   const formElem = document.querySelector('.js-form');
   const arenaLeagueElem = document.querySelector('.js-league');
   const barrackElem = document.querySelector('.js-barrack');
   const trainingHallElem = document.querySelector('.js-training-hall');
   const answerElem = document.querySelector('.js-answer');
-
-  function isTouchDevice(e) {
-    return typeof window.ontouchstart !== 'undefined';
-  }
-
-  if (isTouchDevice) {
-    btnInfoElem.addEventListener('click', (e) => {
-      e.target.classList.toggle('.active');
-    })
-  }
 
   formElem.addEventListener('submit', (e) => {
     e.preventDefault();
