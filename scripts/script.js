@@ -2,12 +2,13 @@ import { calculator } from "./calculator.js";
 
 window.onload = function () {
   const formElem = document.querySelector('.js-form');
+  const btnElem = document.querySelector('.js-btn-submit')
   const arenaLeagueElem = document.querySelector('.js-league');
   const barrackElem = document.querySelector('.js-barrack');
   const trainingHallElem = document.querySelector('.js-training-hall');
   const answerElem = document.querySelector('.js-answer');
 
-  formElem.addEventListener('submit', (e) => {
+  btnElem.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const arenaLeagueVal = Number.parseInt(arenaLeagueElem.value);
