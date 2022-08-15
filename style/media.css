@@ -1,0 +1,36 @@
+@media(max-width: 660px){
+  .container{
+    max-width: 650px;
+  }
+
+  .calculator__title {
+    margin: 0 0 20px;
+    font-size: 30px;
+  }
+
+  .calculator__form{
+    padding: 0;
+    max-width: 270px;
+  }
+
+  .calculator__btn {
+    margin-top: 20px;
+  }
+}
+
+@media(max-width: 400px){
+  .container{
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .calculator__input {
+    width: 270px;
+    font-size: 15px;
+  }
+
+  .calculator__tooltip-text{
+    left: -235px;
+    width: 270px;
+  }
+}

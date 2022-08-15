@@ -41,7 +41,7 @@ body{
 }
 
 .calculator {
-  padding: 40px 20px 15px;
+  padding: 40px 0 20px;
 }
 
 .calculator__container {
@@ -53,8 +53,7 @@ body{
 
 .calculator__title {
   width: 100%;
-  padding: 20px 50px;
-  margin: 0 0 10px;
+  margin: 0 0 35px;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -81,11 +80,8 @@ body{
   margin-bottom: 10px;
 }
 
-.calculator__label {
-
-}
-
 .calculator__text-form {
+  max-width: 100%;
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
@@ -172,7 +168,7 @@ transition: all 0.7s ease-out 0s;
 }
 
 .answer {
-  padding: 15px 20px 40px;
+  padding: 15px 0 40px;
 }
 
 .answer__container{
@@ -189,4 +185,16 @@ transition: all 0.7s ease-out 0s;
   background-color: #fff;
   color: #41413f;
   font-size: 20px;
+}
+
+.calculator__btn.active{
+  background: rgb(183,235,169);
+  background: linear-gradient(360deg, rgba(112,220,23,1) 0%,  rgba(183,235,169,1) 100%); 
+  color: #41413f;
+}
+
+.calculator__btn.active + .calculator__tooltip-text{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
