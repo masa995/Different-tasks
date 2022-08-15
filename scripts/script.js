@@ -8,7 +8,7 @@ window.onload = function () {
   const trainingHallElem = document.querySelector('.js-training-hall');
   const answerElem = document.querySelector('.js-answer');
 
-  btnElem.addEventListener('submit', (e) => {
+  formElem.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const arenaLeagueVal = Number.parseInt(arenaLeagueElem.value);
